@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Question, choice
+from .models import Question, Choice
 
 admin.site.site_header = "Polls Admin"
 admin.site.site_title = "Polls admin area"
 admin.site.index_title = "Welcome to Polls admin area"
 
 class ChoiceInline(admin.TabularInline):
-    model = choice
+    model = Choice
     extra = 3
 
 class QuestionAdmin(admin.ModelAdmin):
